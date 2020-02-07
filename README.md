@@ -10,3 +10,5 @@ Invite link: https://codewars.com/r/b-CoMA
 tsc -w
 node dist/...js
 ```
+
+Src is incomplete because there are lots of really easy ones.
