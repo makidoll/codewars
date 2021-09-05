@@ -7,6 +7,7 @@
 Invite link: https://codewars.com/r/b-CoMA
 
 ```bash
+cd typescript
 tsc -w
 node dist/...js
 ```
