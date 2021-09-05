@@ -21,9 +21,7 @@ class Boolfuck {
 						.match(/.{1,8}/g) as string[]) || []
 			  )
 					.map(char =>
-						Array.from(char.padEnd(8, "0"))
-							.reverse()
-							.join(""),
+						Array.from(char.padEnd(8, "0")).reverse().join(""),
 					)
 					.map(char => String.fromCharCode(parseInt(char, 2)))
 					.join("");
@@ -40,9 +38,11 @@ class Boolfuck {
 
 	inputPointer = 0;
 	inputArr =
+		// @ts-ignore
 		this.input.length == 0
 			? []
-			: Array.from(this.input)
+			: // @ts-ignore
+			  Array.from(this.input)
 					.map(this.charToLittleEndian)
 					.reduce((a, b) => [...a, ...b]);
 
@@ -97,9 +97,8 @@ class Boolfuck {
 	closeBracket() {
 		if (this.getCell(this.cellPointer) == true) {
 			// jump back to match opening bracket
-			this.codePointer = this.bracketPointerStack[
-				this.bracketPointerStack.length - 1
-			];
+			this.codePointer =
+				this.bracketPointerStack[this.bracketPointerStack.length - 1];
 		} else {
 			// pop and continue
 			this.bracketPointerStack.pop();
