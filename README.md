@@ -6,15 +6,9 @@
 
 Invite link: https://codewars.com/r/b-CoMA
 
-```bash
-cd deno
-deno run -A script.ts
-```
-
-or
+Make sure [Bun JavaScript runtime](https://bun.sh) is installed
 
 ```bash
-cd typescript
-tsc -w
-node dist/script.ts
+cd bun
+bun run script.ts
 ```
