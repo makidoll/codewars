@@ -7,9 +7,14 @@
 Invite link: https://codewars.com/r/b-CoMA
 
 ```bash
-cd typescript
-tsc -w
-node dist/...js
+cd deno
+deno run -A script.ts
 ```
 
-Src is incomplete because there are lots of really easy ones.
+or
+
+```bash
+cd typescript
+tsc -w
+node dist/script.ts
+```
