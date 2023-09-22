@@ -109,7 +109,7 @@ function encode(freqs: Freqs, s: string) {
 		out += seq.reverse().join("");
 	}
 
-	return out || null;
+	return out;
 }
 
 // takes [ [String, Int] ], String (with "0" and "1"); returns: String
@@ -135,7 +135,7 @@ function decode(freqs: Freqs, bits: string) {
 		currentNode = rootNode;
 	}
 
-	return out || null;
+	return out;
 }
 
 // examples tests
